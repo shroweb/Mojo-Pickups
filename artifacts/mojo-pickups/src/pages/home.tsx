@@ -14,12 +14,15 @@ const fadeUp = {
 };
 
 const pickupCategories = [
-  { slug: "stratocaster", name: "Stratocaster", desc: "Hand-scatter-wound vintage Strat sets — from glassy 50s chime to punchy 60s bite." },
-  { slug: "telecaster", name: "Telecaster", desc: "The authentic twang and grit of a '52 or '59 Telecaster, wound to blueprint accuracy." },
-  { slug: "humbucker", name: "Humbucker / PAF", desc: "True mismatched PAF coils wound on an automatic winder — the way Gibson originally did it." },
-  { slug: "p90", name: "P90", desc: "Vintage-voiced soapbar and dogear P90s loaded with aged Alnico." },
-  { slug: "gold-foil", name: "Gold Foil", desc: "Guyatone, DeArmond, Dynasonic, Teisco — lo-fi clarity and harmonic grit like nothing else." },
-  { slug: "jazzmaster", name: "Jazzmaster & Jaguar", desc: "Premium Alnico offset pickups wound to vintage specification." },
+  { slug: "stratocaster", name: "Stratocaster", desc: "Hand-scatter-wound vintage Strat sets — from glassy 50s chime to punchy 60s bite.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2015/07/Mojo-Pickups-60s-Strat-Ramon-Goose_S-e1504037141665-500x334.jpg" },
+  { slug: "telecaster", name: "Telecaster", desc: "The authentic twang and grit of a '52 or '59 Telecaster, wound to blueprint accuracy.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2015/07/Mojo-Broaadcater-Set-Clean-2026-500x366.jpg" },
+  { slug: "humbucker", name: "Humbucker / PAF", desc: "True mismatched PAF coils wound on an automatic winder — the way Gibson originally did it.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2016/03/Mojo-Pickups-Vintage-PAF-Ag-500x399.jpg" },
+  { slug: "p90", name: "P90", desc: "Vintage-voiced soapbar and dogear P90s loaded with aged Alnico.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2015/08/Mojo-Pickups-Nickel-P90s-500x351.jpg" },
+  { slug: "gold-foil", name: "Gold Foil", desc: "Guyatone, DeArmond, Dynasonic, Teisco — lo-fi clarity and harmonic grit like nothing else.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2015/08/Mojo-Pickups-Gold-Foils-500x333.jpg" },
+  { slug: "jazzmaster", name: "Jazzmaster & Jaguar", desc: "Premium Alnico offset pickups wound to vintage specification.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2017/10/Mojo-Pickups-Jazzmaster-500x333.jpg" },
+  { slug: "cunife", name: "CuNiFe Wide Range", desc: "Seth Lover's Wide Range design built with genuine CuNiFe magnets — for Thinline and Deluxe Telecasters.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2015/08/Mojo-Pickups-Wide-Range-Hum-500x336.jpg" },
+  { slug: "mojotron", name: "Mojotron", desc: "Filtertron-style pickups — the chiming, twangy clarity of a vintage Gretsch done right.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2017/10/Mojo-Pickups-MojoTron-Filte-500x381.jpg" },
+  { slug: "charlie-christian", name: "Charlie Christian", desc: "The original blade single coil — warm, clear, and unmistakably jazzy.", img: "https://www.mojopickups.co.uk/wp-content/uploads/2016/09/Mojo-Pickups-Charlie-Christ-500x389.jpg" },
 ];
 
 const testimonials = [
@@ -189,16 +192,27 @@ export default function Home() {
               >
                 <Link
                   href={`/pickups/${cat.slug}`}
-                  className="group block bg-background p-8 md:p-10 h-full hover:bg-card transition-colors"
+                  className="group block bg-background h-full hover:bg-card transition-colors"
                   data-testid={`card-pickup-category-${cat.slug}`}
                 >
-                  <h3 className="font-serif text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    {cat.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">{cat.desc}</p>
-                  <span className="inline-flex items-center gap-1 text-primary text-xs uppercase tracking-wider font-medium">
-                    View Pickups <ArrowRight className="w-3 h-3" />
-                  </span>
+                  {cat.img && (
+                    <div className="overflow-hidden aspect-[3/2]">
+                      <img
+                        src={cat.img}
+                        alt={`Mojo Pickups ${cat.name}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div className="p-8 md:p-10">
+                    <h3 className="font-serif text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                      {cat.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-1 text-primary text-xs uppercase tracking-wider font-medium">
+                      View Pickups <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

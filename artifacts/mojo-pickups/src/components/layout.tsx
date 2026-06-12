@@ -17,9 +17,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/90 backdrop-blur-md">
         <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-serif text-2xl font-bold tracking-wider text-foreground group-hover:text-primary transition-colors">
-              MOJO
-            </span>
+            <img
+              src="https://www.mojopickups.co.uk/wp-content/uploads/2018/03/mojoweblogo.png"
+              alt="Mojo Pickups"
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -97,8 +99,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="md:col-span-1">
-              <Link href="/" className="font-serif text-2xl font-bold tracking-wider inline-block mb-6">
-                MOJO
+              <Link href="/" className="inline-block mb-6">
+                <img
+                  src="https://www.mojopickups.co.uk/wp-content/uploads/2018/03/mojoweblogo.png"
+                  alt="Mojo Pickups"
+                  className="h-16 w-auto"
+                />
               </Link>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                 Boutique, hand-wound guitar pickups. Made one at a time from scratch in Ripponden, West Yorkshire, UK.
@@ -123,6 +129,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/pickups/humbucker" className="text-muted-foreground hover:text-primary text-sm transition-colors">Humbucker / PAF</Link></li>
                 <li><Link href="/pickups/p90" className="text-muted-foreground hover:text-primary text-sm transition-colors">P90</Link></li>
                 <li><Link href="/pickups/gold-foil" className="text-muted-foreground hover:text-primary text-sm transition-colors">Gold Foil</Link></li>
+                <li><Link href="/pickups/jazzmaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Jazzmaster & Jaguar</Link></li>
+                <li><Link href="/pickups/cunife" className="text-muted-foreground hover:text-primary text-sm transition-colors">CuNiFe Wide Range</Link></li>
+                <li><Link href="/pickups/mojotron" className="text-muted-foreground hover:text-primary text-sm transition-colors">Mojotron</Link></li>
+                <li><Link href="/pickups/charlie-christian" className="text-muted-foreground hover:text-primary text-sm transition-colors">Charlie Christian</Link></li>
+                <li><Link href="/pickups/dynas" className="text-muted-foreground hover:text-primary text-sm transition-colors">Dynas</Link></li>
+                <li><Link href="/pickups/bass" className="text-muted-foreground hover:text-primary text-sm transition-colors">Bass</Link></li>
+                <li><Link href="/pickups/lipstick" className="text-muted-foreground hover:text-primary text-sm transition-colors">Lipstick</Link></li>
               </ul>
             </div>
 

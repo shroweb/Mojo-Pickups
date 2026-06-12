@@ -13,6 +13,12 @@ import HumbuckerPickups from "@/pages/pickups/humbucker";
 import P90Pickups from "@/pages/pickups/p90";
 import GoldFoilPickups from "@/pages/pickups/gold-foil";
 import JazzmasterPickups from "@/pages/pickups/jazzmaster";
+import CuNiFePickups from "@/pages/pickups/cunife";
+import MojotronPickups from "@/pages/pickups/mojotron";
+import CharlieChristianPickups from "@/pages/pickups/charlie-christian";
+import DynasPickups from "@/pages/pickups/dynas";
+import BassPickups from "@/pages/pickups/bass";
+import LipstickPickups from "@/pages/pickups/lipstick";
 import Process from "@/pages/process";
 import Contact from "@/pages/contact";
 
@@ -31,6 +37,12 @@ function Router() {
         <Route path="/pickups/p90" component={P90Pickups} />
         <Route path="/pickups/gold-foil" component={GoldFoilPickups} />
         <Route path="/pickups/jazzmaster" component={JazzmasterPickups} />
+        <Route path="/pickups/cunife" component={CuNiFePickups} />
+        <Route path="/pickups/mojotron" component={MojotronPickups} />
+        <Route path="/pickups/charlie-christian" component={CharlieChristianPickups} />
+        <Route path="/pickups/dynas" component={DynasPickups} />
+        <Route path="/pickups/bass" component={BassPickups} />
+        <Route path="/pickups/lipstick" component={LipstickPickups} />
         <Route path="/process" component={Process} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />

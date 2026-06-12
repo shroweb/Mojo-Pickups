@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import benchPng from "@/assets/pickup-bench.png";
 import windingPng from "@/assets/process-winding.png";
 
+const marcPhoto = "https://www.mojopickups.co.uk/wp-content/uploads/2018/03/mojomarc.jpg";
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
@@ -67,8 +69,8 @@ export default function About() {
               transition={{ duration: 0.7 }}
             >
               <img
-                src={benchPng}
-                alt="Marc Ransley winding guitar pickups at the Mojo Pickups workshop bench"
+                src={marcPhoto}
+                alt="Marc Ransley playing guitar — the man behind Mojo Pickups"
                 className="w-full aspect-[4/3] object-cover"
               />
             </motion.div>
