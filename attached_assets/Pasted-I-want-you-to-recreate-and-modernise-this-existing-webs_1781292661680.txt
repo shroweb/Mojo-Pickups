@@ -1,0 +1,194 @@
+I want you to recreate and modernise this existing website:
+
+WEBSITE URL:
+[PASTE WEBSITE URL HERE]
+
+MAIN GOAL:
+Scan the existing website, identify its current pages, sections, services, images, content, navigation structure, contact details and calls to action, then rebuild it as a modern responsive website.
+
+Do not just make a generic landing page. Recreate the actual website structure, but modernise the design, UX, UI, hierarchy, SEO and conversion flow.
+
+TECH STACK:
+Use React, Vite and Tailwind CSS.
+Create a clean, maintainable component structure.
+Use responsive, mobile-first design.
+
+SITE SCANNING REQUIREMENTS:
+First inspect the existing website and identify:
+
+* Main navigation pages
+* Footer links
+* Service pages
+* About page
+* Contact page
+* Gallery pages
+* Blog/news pages if present
+* Menu pages if it is a restaurant
+* Booking/enquiry pages if present
+* Any repeated important content
+* Phone number, email, address and opening hours
+* Social media links
+* Existing images and media assets
+
+Then recreate the same meaningful pages in the new version.
+
+PAGE REQUIREMENTS:
+Create pages that match the existing site’s structure as closely as possible.
+For example, if the original site has:
+
+* Home
+* About
+* Services
+* Individual service pages
+* Gallery
+* Testimonials
+* Contact
+
+Then the new site should also have those pages.
+
+Use React Router for multi-page navigation if there is more than one page.
+
+IMAGE REQUIREMENTS:
+Use the existing website’s images where possible.
+
+You may:
+
+* Download images into the project assets folder, or
+* Hotlink images from the existing site if downloading is not practical.
+
+Prefer downloading images locally when possible so the project is self-contained.
+
+Keep image usage relevant to the original business.
+Do not use random unrelated stock images unless the original site has no usable images.
+
+CONTENT REQUIREMENTS:
+Use the existing website content as the base.
+Rewrite and improve the wording where needed so it sounds more professional, clear and modern.
+Keep the business details accurate:
+
+* Business name
+* Services
+* Location
+* Phone number
+* Email
+* Address
+* Opening hours
+* Social links
+
+Do not invent fake contact details.
+If something is missing, use a clear placeholder such as “[Email address]” or “[Opening hours]”.
+
+DESIGN DIRECTION:
+Modernise the site so it looks like a current, professional UK business website.
+
+Improve:
+
+* Visual hierarchy
+* Typography
+* Spacing
+* Mobile layout
+* Calls to action
+* Trust signals
+* Service presentation
+* Contact/enquiry flow
+* Readability
+* SEO structure
+
+The design should feel bespoke to the business, not like a generic template.
+
+HOMEPAGE REQUIREMENTS:
+The homepage should clearly show:
+
+* Who the business is
+* What they do
+* Where they operate
+* Why customers should trust them
+* Main services
+* Reviews/testimonials if available
+* Gallery/work examples if available
+* Strong call-to-action buttons
+* Contact details
+
+Use a strong hero section with:
+
+* Clear headline
+* Short supporting paragraph
+* Primary CTA
+* Secondary CTA
+* Relevant image/background
+
+SERVICE PAGE REQUIREMENTS:
+If the original website has service pages, recreate them.
+If it only has services listed on one page, improve them into clear service sections or service cards.
+
+Each service should include:
+
+* Service name
+* Short description
+* Benefit-led copy
+* CTA to enquire, book, call or request a quote
+
+CONTACT PAGE REQUIREMENTS:
+Create a proper contact page or contact section with:
+
+* Phone
+* Email
+* Address
+* Opening hours if available
+* Social links
+* Contact form
+* Map embed placeholder or map area if relevant
+
+The contact form should include:
+
+* Name
+* Email
+* Phone
+* Message
+* Submit button
+
+The form does not need real backend email sending, but it should show a clean success message when submitted.
+
+SEO REQUIREMENTS:
+Improve the structure for local SEO.
+
+Use:
+
+* One clear H1 per page
+* Logical H2 and H3 headings
+* Service-focused page titles
+* Local/location-based copy where relevant
+* Clean semantic HTML
+* Descriptive meta titles and meta descriptions
+* Image alt text
+* Clear internal linking between pages
+
+UX REQUIREMENTS:
+The new site must have:
+
+* Responsive navigation
+* Mobile-friendly layout
+* Clear CTAs throughout
+* No clutter
+* No duplicated broken content
+* No lorem ipsum
+* No broken image links
+* No placeholder buttons that do nothing
+* No unfinished demo sections
+* No random template content
+
+RECREATE BUT IMPROVE:
+Keep the same business identity and information, but improve the quality dramatically.
+
+Do not copy the old visual design exactly.
+Use the old site as the source of truth for content and structure, then rebuild it as a much better modern version.
+
+DELIVERABLE:
+Build the full working website in this Replit project.
+Make sure it runs without errors.
+Use clean folders such as:
+
+* src/components
+* src/pages
+* src/assets
+* src/data

@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "FV-tBO0SEouGj0xtHMLVf"
+uri = "file://artifacts/mojo-pickups/src/assets/hero-pickup.png"
+type = "image"
+title = "Close-up of wound copper wire coils"
+
+[[generated]]
+id = "nkdsCfJm3iXcxyyeTpvYi"
+uri = "file://artifacts/mojo-pickups/src/assets/process-winding.png"
+type = "image"
+title = "Hands working on a guitar pickup"
+
+[[generated]]
+id = "6bGNCOONCLcXdcBAl6l1b"
+uri = "file://artifacts/mojo-pickups/src/assets/pickup-bench.png"
+type = "image"
+title = "Guitar pickup on a workbench"
