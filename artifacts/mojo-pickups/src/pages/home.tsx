@@ -1,8 +1,8 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Clock, MapPin, Wrench } from "lucide-react";
-import heroPng from "@/assets/hero-pickup.png";
-import benchPng from "@/assets/pickup-bench.png";
+const heroImg = "https://www.mojopickups.co.uk/wp-content/uploads/2015/08/Mojo-Pickups-Gold-Foils.jpg";
+const aboutImg = "https://www.mojopickups.co.uk/wp-content/uploads/2016/03/Mojo-Pickups-Vintage-PAF-Ag.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -58,7 +58,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden" data-testid="section-hero">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroPng})` }}
+          style={{ backgroundImage: `url(${heroImg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
         <div className="relative z-10 container mx-auto px-4 md:px-6 py-24">
@@ -70,7 +70,7 @@ export default function Home() {
             <motion.p
               custom={0}
               variants={fadeUp}
-              className="text-primary uppercase tracking-widest text-sm font-medium mb-6"
+              className="text-gold uppercase tracking-widest text-sm font-medium mb-6"
             >
               Ripponden, West Yorkshire — Est. 2009
             </motion.p>
@@ -99,7 +99,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-foreground font-medium text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/50 text-foreground font-medium text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
                 data-testid="link-about"
               >
                 About Marc
@@ -110,12 +110,13 @@ export default function Home() {
       </section>
 
       {/* Trust Points */}
-      <section className="border-y border-white/5 bg-card" data-testid="section-trust">
+      <section className="border-b border-white/5 bg-card" data-testid="section-trust">
+        <div className="h-0.5 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-white/5">
             {trustPoints.map((tp, i) => (
               <div key={i} className="flex flex-col items-center text-center p-8 md:p-10 gap-3">
-                <tp.icon className="w-6 h-6 text-primary mb-1" />
+                <tp.icon className="w-6 h-6 text-gold mb-1" />
                 <p className="font-serif text-lg font-semibold text-foreground">{tp.label}</p>
                 <p className="text-xs text-muted-foreground leading-relaxed">{tp.detail}</p>
               </div>
@@ -135,8 +136,8 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <img
-                src={benchPng}
-                alt="Mojo Pickups workshop bench with handwound guitar pickups"
+                src={aboutImg}
+                alt="Mojo Pickups hand-wound vintage PAF humbucker"
                 className="w-full aspect-[4/3] object-cover"
               />
             </motion.div>
@@ -146,7 +147,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
             >
-              <p className="text-primary uppercase tracking-widest text-xs font-medium mb-4">One Man, One Mission</p>
+              <p className="flex items-center gap-3 text-gold uppercase tracking-widest text-xs font-medium mb-4"><span className="inline-block w-6 h-px bg-gold" />One Man, One Mission</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
                 Marc Ransley — pickup maker.
               </h2>
@@ -172,7 +173,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-card" data-testid="section-pickup-range">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <p className="text-primary uppercase tracking-widest text-xs font-medium mb-4">The Range</p>
+            <p className="inline-flex items-center gap-3 text-gold uppercase tracking-widest text-xs font-medium mb-4"><span className="inline-block w-6 h-px bg-gold" />The Range</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
               A pickup for every voice.
             </h2>
@@ -192,7 +193,7 @@ export default function Home() {
               >
                 <Link
                   href={`/pickups/${cat.slug}`}
-                  className="group block bg-background h-full hover:bg-card transition-colors"
+                  className="group block bg-background h-full hover:bg-card transition-all border-l-4 border-transparent hover:border-primary"
                   data-testid={`card-pickup-category-${cat.slug}`}
                 >
                   {cat.img && (
@@ -201,6 +202,7 @@ export default function Home() {
                         src={cat.img}
                         alt={`Mojo Pickups ${cat.name}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
                       />
                     </div>
                   )}
@@ -233,7 +235,7 @@ export default function Home() {
       <section className="py-24 md:py-32" data-testid="section-testimonials">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <p className="text-primary uppercase tracking-widest text-xs font-medium mb-4">Reviews</p>
+            <p className="inline-flex items-center gap-3 text-gold uppercase tracking-widest text-xs font-medium mb-4"><span className="inline-block w-6 h-px bg-gold" />Reviews</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold">
               What players say.
             </h2>
@@ -247,13 +249,14 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card p-8 md:p-12"
+                className="bg-card p-8 md:p-12 relative overflow-hidden"
                 data-testid={`blockquote-testimonial-${i}`}
               >
-                <p className="text-foreground font-serif text-lg md:text-xl leading-relaxed mb-6 italic">
+                <span className="absolute top-2 left-4 font-serif text-8xl text-primary/10 leading-none select-none pointer-events-none" aria-hidden="true">&ldquo;</span>
+                <p className="text-foreground font-serif text-lg md:text-xl leading-relaxed mb-6 italic relative z-10">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <footer className="text-primary text-xs uppercase tracking-widest">
+                <footer className="text-gold text-xs uppercase tracking-widest relative z-10">
                   — {t.source}
                 </footer>
               </motion.blockquote>

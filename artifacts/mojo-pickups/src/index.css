@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700;800&family=Bungee&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -24,6 +24,9 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-primary-border: var(--primary-border);
+
+  --color-gold: hsl(var(--gold));
+  --color-gold-foreground: hsl(var(--gold-foreground));
 
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
@@ -75,6 +78,9 @@
   --primary: 26 80% 45%;
   --primary-foreground: 0 0% 7%;
 
+  --gold: 44 90% 58%;
+  --gold-foreground: 0 0% 7%;
+
   --secondary: 0 0% 15%;
   --secondary-foreground: 40 16% 95%;
 
@@ -102,8 +108,9 @@
   --chart-4: 15 75% 40%;
   --chart-5: 35 65% 30%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: 'Playfair Display', serif;
+  --app-font-sans: 'Barlow', sans-serif;
+  --app-font-serif: 'Bungee', 'Barlow Condensed', sans-serif;
+  --app-font-display-condensed: 'Barlow Condensed', sans-serif;
   --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --radius: 0.125rem;
 
@@ -159,6 +166,18 @@
   --chart-5: 35 65% 30%;
 }
 
+@layer utilities {
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+  .bg-gold\/10 { background-color: hsl(var(--gold) / 0.1); }
+  .bg-gold\/50 { background-color: hsl(var(--gold) / 0.5); }
+  .via-gold\/50 {
+    --tw-gradient-via: hsl(var(--gold) / 0.5);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -169,6 +188,19 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-foreground;
+    @apply font-serif text-foreground;
+    letter-spacing: 0;
+    text-transform: uppercase;
+   }
+
+  nav a,
+  button,
+  a[class*="uppercase"],
+  p[class*="uppercase"],
+  span[class*="uppercase"],
+  label[class*="uppercase"] {
+    font-family: var(--app-font-display-condensed);
+    font-weight: 700;
+    letter-spacing: 0.08em;
   }
 }

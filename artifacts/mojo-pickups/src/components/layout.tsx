@@ -15,6 +15,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-[100dvh] flex flex-col font-sans bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/90 backdrop-blur-md">
+        <div className="border-b border-white/5 bg-gold/10 py-1.5">
+          <p className="text-center text-xs text-gold tracking-wide">
+            Current build time: 40–45 working days · All pickups hand-wound to order in West Yorkshire
+          </p>
+        </div>
         <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <img
@@ -35,8 +40,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <Link 
                 key={link.href} 
                 href={link.href}
-                className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-primary ${
-                  location.startsWith(link.href) ? "text-primary" : "text-muted-foreground"
+                className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-primary pb-0.5 ${
+                  location.startsWith(link.href) ? "text-primary border-b-2 border-primary" : "text-muted-foreground border-b-2 border-transparent"
                 }`}
               >
                 {link.label}
@@ -47,7 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="hidden md:flex">
             <Link 
               href="/pickups" 
-              className="inline-flex items-center justify-center h-10 px-6 py-2 text-sm font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 border border-primary-border"
+              className="inline-flex items-center justify-center h-10 px-6 py-2 text-sm font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 rounded-none"
             >
               Shop Pickups
             </Link>
@@ -97,7 +102,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-card border-t border-white/5 pt-16 pb-8">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
             <div className="md:col-span-1">
               <Link href="/" className="inline-block mb-6">
                 <img
@@ -121,22 +126,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
 
-            <div>
+            <div className="md:col-span-2">
               <h4 className="font-serif text-lg font-semibold mb-6">Explore</h4>
-              <ul className="space-y-4">
-                <li><Link href="/pickups/stratocaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Stratocaster</Link></li>
-                <li><Link href="/pickups/telecaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Telecaster</Link></li>
-                <li><Link href="/pickups/humbucker" className="text-muted-foreground hover:text-primary text-sm transition-colors">Humbucker / PAF</Link></li>
-                <li><Link href="/pickups/p90" className="text-muted-foreground hover:text-primary text-sm transition-colors">P90</Link></li>
-                <li><Link href="/pickups/gold-foil" className="text-muted-foreground hover:text-primary text-sm transition-colors">Gold Foil</Link></li>
-                <li><Link href="/pickups/jazzmaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Jazzmaster & Jaguar</Link></li>
-                <li><Link href="/pickups/cunife" className="text-muted-foreground hover:text-primary text-sm transition-colors">CuNiFe Wide Range</Link></li>
-                <li><Link href="/pickups/mojotron" className="text-muted-foreground hover:text-primary text-sm transition-colors">Mojotron</Link></li>
-                <li><Link href="/pickups/charlie-christian" className="text-muted-foreground hover:text-primary text-sm transition-colors">Charlie Christian</Link></li>
-                <li><Link href="/pickups/dynas" className="text-muted-foreground hover:text-primary text-sm transition-colors">Dynas</Link></li>
-                <li><Link href="/pickups/bass" className="text-muted-foreground hover:text-primary text-sm transition-colors">Bass</Link></li>
-                <li><Link href="/pickups/lipstick" className="text-muted-foreground hover:text-primary text-sm transition-colors">Lipstick</Link></li>
-              </ul>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-4">
+                <Link href="/pickups/stratocaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Stratocaster</Link>
+                <Link href="/pickups/telecaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Telecaster</Link>
+                <Link href="/pickups/humbucker" className="text-muted-foreground hover:text-primary text-sm transition-colors">Humbucker</Link>
+                <Link href="/pickups/p90" className="text-muted-foreground hover:text-primary text-sm transition-colors">P90</Link>
+                <Link href="/pickups/gold-foil" className="text-muted-foreground hover:text-primary text-sm transition-colors">Gold Foil</Link>
+                <Link href="/pickups/jazzmaster" className="text-muted-foreground hover:text-primary text-sm transition-colors">Jazzmaster</Link>
+                <Link href="/pickups/cunife" className="text-muted-foreground hover:text-primary text-sm transition-colors">CuNiFe</Link>
+                <Link href="/pickups/mojotron" className="text-muted-foreground hover:text-primary text-sm transition-colors">Mojotron</Link>
+                <Link href="/pickups/charlie-christian" className="text-muted-foreground hover:text-primary text-sm transition-colors">Charlie Christian</Link>
+                <Link href="/pickups/dynas" className="text-muted-foreground hover:text-primary text-sm transition-colors">Dynas</Link>
+                <Link href="/pickups/bass" className="text-muted-foreground hover:text-primary text-sm transition-colors">Bass</Link>
+                <Link href="/pickups/lipstick" className="text-muted-foreground hover:text-primary text-sm transition-colors">Lipstick</Link>
+              </div>
             </div>
 
             <div>

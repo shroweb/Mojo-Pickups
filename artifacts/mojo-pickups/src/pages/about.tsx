@@ -1,10 +1,8 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import benchPng from "@/assets/pickup-bench.png";
-import windingPng from "@/assets/process-winding.png";
-
 const marcPhoto = "https://www.mojopickups.co.uk/wp-content/uploads/2018/03/mojomarc.jpg";
+const windingImg = "https://www.mojopickups.co.uk/wp-content/uploads/2017/10/Mojo-Pickups-Jazzmaster.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -45,7 +43,7 @@ export default function About() {
       <section className="relative py-32 md:py-40 bg-card border-b border-white/5 overflow-hidden" data-testid="section-about-hero">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-            <motion.p custom={0} variants={fadeUp} className="text-primary uppercase tracking-widest text-xs font-medium mb-4">
+            <motion.p custom={0} variants={fadeUp} className="text-gold uppercase tracking-widest text-xs font-medium mb-4">
               About Mojo Pickups
             </motion.p>
             <motion.h1 custom={1} variants={fadeUp} className="text-5xl md:text-7xl font-serif font-bold leading-none mb-6">
@@ -104,7 +102,7 @@ export default function About() {
       <section className="py-24 md:py-32 bg-card" data-testid="section-philosophy">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-primary uppercase tracking-widest text-xs font-medium mb-4">Philosophy</p>
+            <p className="text-gold uppercase tracking-widest text-xs font-medium mb-4">Philosophy</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
               Getting the small things right.
             </h2>
@@ -149,7 +147,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-primary uppercase tracking-widest text-xs font-medium mb-4">How It's Done</p>
+              <p className="text-gold uppercase tracking-widest text-xs font-medium mb-4">How It's Done</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">The Mojo Process</h2>
               <p className="text-muted-foreground leading-relaxed mb-10">
                 Every aspect of a Mojo pickup is considered — from the wire gauge to the wax blend. Here is a brief overview of how each pickup is made. For the full deep-dive, visit The Process page.
@@ -194,8 +192,8 @@ export default function About() {
               className="sticky top-28"
             >
               <img
-                src={windingPng}
-                alt="Close-up of hand-wound guitar pickup coils on a winding machine in the Mojo Pickups workshop"
+                src={windingImg}
+                alt="Mojo Pickups Jazzmaster hand-wound guitar pickups"
                 className="w-full aspect-[3/4] object-cover"
               />
             </motion.div>

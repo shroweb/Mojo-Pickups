@@ -1,8 +1,8 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import windingPng from "@/assets/process-winding.png";
-import benchPng from "@/assets/pickup-bench.png";
+const windingImg = "https://www.mojopickups.co.uk/wp-content/uploads/2015/08/Mojo-Pickups-Gold-Foils.jpg";
+const benchImg = "https://www.mojopickups.co.uk/wp-content/uploads/2015/07/Mojo-Broaadcater-Set-Clean-2026.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -66,12 +66,12 @@ export default function Process() {
       <section className="relative py-32 md:py-40 overflow-hidden" data-testid="section-process-header">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${windingPng})` }}
+          style={{ backgroundImage: `url(${windingImg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-            <motion.p custom={0} variants={fadeUp} className="text-primary uppercase tracking-widest text-xs font-medium mb-4">
+            <motion.p custom={0} variants={fadeUp} className="text-gold uppercase tracking-widest text-xs font-medium mb-4">
               How It's Made
             </motion.p>
             <motion.h1 custom={1} variants={fadeUp} className="text-5xl md:text-7xl font-serif font-bold leading-none mb-6">
@@ -125,7 +125,7 @@ export default function Process() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-primary uppercase tracking-widest text-xs font-medium mb-4">Made to Order</p>
+              <p className="text-gold uppercase tracking-widest text-xs font-medium mb-4">Made to Order</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
                 40–45 working days.
               </h2>
@@ -150,8 +150,8 @@ export default function Process() {
               transition={{ duration: 0.7 }}
             >
               <img
-                src={benchPng}
-                alt="Completed Mojo Pickups guitar pickups laid out on a workbench"
+                src={benchImg}
+                alt="Mojo Pickups hand-wound Telecaster set on workbench"
                 className="w-full aspect-square object-cover"
               />
             </motion.div>

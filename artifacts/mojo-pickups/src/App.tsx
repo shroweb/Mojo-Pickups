@@ -21,6 +21,7 @@ import BassPickups from "@/pages/pickups/bass";
 import LipstickPickups from "@/pages/pickups/lipstick";
 import Process from "@/pages/process";
 import Contact from "@/pages/contact";
+import ProductPage from "@/pages/product";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ function Router() {
         <Route path="/pickups/dynas" component={DynasPickups} />
         <Route path="/pickups/bass" component={BassPickups} />
         <Route path="/pickups/lipstick" component={LipstickPickups} />
+        <Route path="/pickups/:category/:product" component={ProductPage} />
         <Route path="/process" component={Process} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />

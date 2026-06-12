@@ -145,7 +145,7 @@ export default function Pickups() {
               >
                 <Link
                   href={`/pickups/${cat.slug}`}
-                  className="group block bg-background hover:bg-card transition-colors h-full"
+                  className="group block bg-background hover:bg-card transition-all h-full border-l-4 border-transparent hover:border-primary"
                   data-testid={`card-pickup-${cat.slug}`}
                 >
                   {cat.img && (
